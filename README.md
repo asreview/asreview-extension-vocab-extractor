@@ -1,5 +1,5 @@
 # Extension - matrix and vocabulary extractor for TF-IDF
-An extension for ASReview that adds a tf-idf extractor that saves the matrix and the vocabulary to pickle and JSON respectively. Requested in discussion post #650.
+An extension for ASReview that adds a tf-idf extractor that saves the matrix and the vocabulary to pickle and JSON respectively. Requested in discussion post [#650](https://github.com/asreview/asreview/discussions/650).
 
 
 ## Getting started
