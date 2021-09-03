@@ -2,12 +2,12 @@ from setuptools import setup
 from setuptools import find_namespace_packages
 
 setup(
-    name='asreview-template-model-extension',
+    name=' asreview-extension-tfidf-extractor',
     version='0.1',
-    description='Example classifier extension',
-    url='https://github.com/asreview/asreview',
-    author='ASReview team',
-    author_email='asreview@uu.nl',
+    description='tf-idf with saving functionality',
+    url='https://github.com/asreview/asreview-extension-tfidf-extractor',
+    author='Jelle Teijema',
+    author_email='j.j.teijema@uu.nl',
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
@@ -24,10 +24,9 @@ setup(
     ],
     entry_points={
         'asreview.models.classifiers': [
-            'nb_example = asreviewcontrib.models.nb_default_param:NaiveBayesDefaultParamsModel',
         ],
         'asreview.models.feature_extraction': [
-            # define feature_extraction algorithms
+            'tfidf_grab = asreviewcontrib.models.tfidf_grab:Tfidf_grab',
         ],
         'asreview.models.balance': [
             # define balance strategy algorithms
