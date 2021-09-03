@@ -38,6 +38,7 @@ import pickle
 matrix = pickle.load(open("matrix.pickle","rb"))
 print(matrix.shape)
 ```
+---
 
 
 The new doc2vec extractor can be used like this, assuming gensim is installed:
