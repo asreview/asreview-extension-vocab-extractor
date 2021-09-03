@@ -4,7 +4,7 @@ An extension for ASReview that adds a tf-idf extractor that saves the matrix and
 
 ## Getting started
 
-Run install the new classifier with:
+Install the new classifier with:
 
 ```bash
 pip install .
