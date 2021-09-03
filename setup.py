@@ -20,13 +20,15 @@ setup(
     python_requires='~=3.6',
     install_requires=[
         'sklearn',
-        'asreview>=0.13'
+        'asreview>=0.13',
+        'gensim',
     ],
     entry_points={
         'asreview.models.classifiers': [
         ],
         'asreview.models.feature_extraction': [
             'tfidf_grab = asreviewcontrib.models.tfidf_grab:Tfidf_grab',
+            'doc2vec_grab = asreviewcontrib.models.doc2vec_grab:Doc2Vec_grab',
         ],
         'asreview.models.balance': [
             # define balance strategy algorithms

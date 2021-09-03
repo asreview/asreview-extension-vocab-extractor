@@ -1,5 +1,5 @@
-# Extension - matrix and vocabulary extractor for TF-IDF
-An extension for ASReview that adds a tf-idf extractor that saves the matrix and the vocabulary to pickle and JSON respectively. Requested in discussion post [#650](https://github.com/asreview/asreview/discussions/650).
+# Extension - matrix and vocabulary extractor for TF-IDF and Doc2Vec
+An extension for ASReview that adds a tf-idf extractor that saves the matrix and the vocabulary to pickle and JSON respectively, and a doc2vec extractor that grabs the entire doc2vec model. Requested in discussion post [#650](https://github.com/asreview/asreview/discussions/650).
 
 
 ## Getting started
@@ -19,9 +19,9 @@ python -m pip install git+https://github.com/asreview/asreview-extension-tfidf-e
 
 ## Usage
 
-Run the simulation as usual, but this time use `tfidf_grab` as feature extractor. Extracts the matrix and the vocabulary during simulation preparation. The new Feature extractor `tfidf_grab` is defined in [`asreviewcontrib.models.tfidf_grab.py`](asreviewcontrib.models.tfidf_grab:Tfidf_grab).
+Run the simulation as usual, but this time use `tfidf_grab` or `doc2vec_grab` as feature extractor. Extracts the matrix and the vocabulary during simulation preparation. The new Feature extractor `tfidf_grab` is defined in [`asreviewcontrib.models.tfidf_grab.py`](asreviewcontrib.models.tfidf_grab:Tfidf_grab), and `doc2vec_grab` is defined in [`asreviewcontrib.models.doc2vec_grab.py`](asreviewcontrib.models.doc2vec_grab:Doc2Vec_grab).
 
-The new extractor can be used like this:
+The new tf-idf extractor can be used like this:
 ```bash
 asreview simulate benchmark:van_de_Schoot_2017 --state_file myreview.h5 -e tfidf_grab
 ```
@@ -39,7 +39,13 @@ matrix = pickle.load(open("matrix.pickle","rb"))
 print(matrix.shape)
 ```
 
----
+
+The new doc2vec extractor can be used like this, assuming gensim is installed:
+```bash
+asreview simulate benchmark:van_de_Schoot_2017 --state_file myreview.h5 -e doc2vec_grab
+```
+The doc2vec extractor will store the entire model to `gensim.model`. As this might be a difficult file to work with, included in the repo is the file `handle_model.ipynb`. This notebook contains code that transforms the gensim model to a dict object with words and their corresponding vector.
+
 
 ## License
 

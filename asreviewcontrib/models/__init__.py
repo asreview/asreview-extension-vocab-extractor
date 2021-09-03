@@ -1,1 +1,2 @@
 from asreviewcontrib.models.tfidf_grab import Tfidf_grab
+from asreviewcontrib.models.doc2vec_grab import Doc2Vec_grab
