@@ -1,6 +1,6 @@
 # Extension for ASReview that adds a tf-idf extractor that saves the matrix and the vocabulary
 
-expanation
+Explain summary
 
 
 ## Getting started

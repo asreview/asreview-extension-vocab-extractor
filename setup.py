@@ -2,7 +2,7 @@ from setuptools import setup
 from setuptools import find_namespace_packages
 
 setup(
-    name=' asreview-extension-tfidf-extractor',
+    name='asreview-extension-tfidf-extractor',
     version='0.1',
     description='tf-idf with saving functionality',
     url='https://github.com/asreview/asreview-extension-tfidf-extractor',

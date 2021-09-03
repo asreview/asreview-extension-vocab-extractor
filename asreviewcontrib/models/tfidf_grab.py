@@ -12,8 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from os import close
 from sklearn.feature_extraction.text import TfidfVectorizer
 import json
+import pandas as pd 
 
 from asreview.models.feature_extraction.base import BaseFeatureExtraction
 
@@ -58,10 +60,11 @@ class Tfidf_grab(BaseFeatureExtraction):
 
         with open('vocabulary.json', 'w') as vc:
             json.dump(self._model.vocabulary_, vc,  indent=4)
-
-        self._model.todense()
+        vc.close()
+        
 
     def transform(self, texts):
         X = self._model.transform(texts).tocsr()
+        X.todense().dump("matrix.pickle")
         return X
 
