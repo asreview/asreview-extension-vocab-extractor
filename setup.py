@@ -10,7 +10,7 @@ setup(
     author_email='j.j.teijema@uu.nl',
     classifiers=[
         'Development Status :: 4 - Beta',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
@@ -38,7 +38,7 @@ setup(
         ]
     },
     project_urls={
-        'Bug Reports': 'https://github.com/asreview/asreview/issues',
-        'Source': 'https://github.com/asreview/asreview/',
+        'Bug Reports': 'https://github.com/asreview/asreview-extension-vocab-extractor/',
+        'Source': 'https://github.com/asreview/asreview-extension-vocab-extractor/',
     },
 )
