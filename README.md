@@ -49,7 +49,7 @@ The doc2vec extractor will store the entire model to `gensim.model`. As this mig
 
 ## Contact
 The best resources to find an answer to your question or ways to get in
-contact with the team are:
+contact are:
 
 - Issues or feature requests - [Extension issue tracker](https://github.com/asreview/asreview-extension-vocab-extractor/issues)
 - Contact - [j.j.teijema@uu.nl](mailto:j.j.teijema@uu.nl)
