@@ -13,7 +13,7 @@ pip install .
 or
 
 ```bash
-python -m pip install git+https://github.com/asreview/asreview-extension-tfidf-extractor.git
+python -m pip install git+https://github.com/asreview/asreview-extension-vocab-extractor.git
 ```
 
 
@@ -45,7 +45,7 @@ The new doc2vec extractor can be used like this, assuming gensim is installed:
 ```bash
 asreview simulate benchmark:van_de_Schoot_2017 --state_file myreview.h5 -e doc2vec_grab
 ```
-The doc2vec extractor will store the entire model to `gensim.model`. As this might be a difficult file to work with, included in the repo is the file `handle_model.ipynb`. This notebook contains code that transforms the gensim model to a dict object with words and their corresponding vector.
+The doc2vec extractor will store the entire model to `gensim.model`. As this might be a difficult file to work with, included in the repo is the file `example_doc2vec.ipynb`. This notebook contains code that transforms the gensim model to a dict object with words and their corresponding vector.
 
 
 ## License
